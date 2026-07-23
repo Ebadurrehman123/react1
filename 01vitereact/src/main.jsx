@@ -30,9 +30,10 @@ const reactElement=React.createElement(
   'click me to visit google'
 )
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root')).
+render(
 
    // anotherElement
    //reactElement
-   <App/>
+   <MyApp/>
 )
