@@ -12,6 +12,7 @@ function App() {
 //js ko usually setcounter boltay hai
 //dusra jo function hai wo reaposible hai fist variable ko 
 //update krna kay liya
+//usestate ma variable ki value hoti hai
   let [counter,setcounter]=useState(15)
 
 
