@@ -6,8 +6,8 @@ function InputBox({
     amount,
     onAmountChange,
     onCurrencyChange,
-    currencyOption=[],
-    selectCurrency="usd",
+    currencyOptions = [],
+    selectCurrency = "usd",
     amountDisable=false,
     currencyDisabled=false,
 
@@ -24,7 +24,7 @@ function InputBox({
                    { label}
                 </label>
                 <input
-                    
+                    id={amountInputId}
                     className="outline-none w-full bg-transparent py-1.5"
                     type="number"
                     placeholder="Amount"
@@ -45,10 +45,9 @@ function InputBox({
                     disabled={currencyDisabled}
                     
                 >
-                    {currencyOption.map((currency)
-                    =>(
+                    {currencyOptions.map((currency)=>(
                         <option key={currency} value={currency}>
-                           {currency}
+                           {String(currency)}
                         </option>
                     ))}
                     

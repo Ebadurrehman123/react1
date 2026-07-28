@@ -11,7 +11,7 @@ function App() {
 
   const currencyInfo = useCurrencyInfo(from)
 
-  const currencyoption=Object.keys(currencyInfo)
+  const options=Object.keys(currencyInfo)
 
   const swap =()=>{
     setFrom(to)
@@ -20,15 +20,15 @@ function App() {
     setAmount(convertedAmount)
 
   }
-  const conver =()=>{
-  setConvertedAmount(amount*currencyInfo[to])
+  const convert =()=>{
+    setConvertedAmount(amount*currencyInfo[to])
   }
 
     return (
         <div
             className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
             style={{
-                backgroundImage: `url('https://www.pexels.com/photo/tokyo-street-scene-with-cyclist-and-pedestrians-38356838/e')`
+                backgroundImage: 'backgroundImage: "url(`https://www.pexels.com/photo/sunset-view-of-aragonese-castle-on-ischia-38542056/`)'
             }}
         >
             <div className="w-full">
@@ -45,9 +45,10 @@ function App() {
                                 label="From"
                                 amount={amount}
                                 currencyOptions={options}
-                                onAmountChange={(e)=>onCurrencyChange(e.target.value)}
+                                oncurrencyChange={(currency)=> setFrom(currency)}
+                                onAmountChange={(currency)=>setAmount(currency)}
                                 selectCurrency={from}
-                            />
+                    />
                         </div>
                         <div className="relative w-full h-0.5">
                             <button
@@ -65,7 +66,7 @@ function App() {
                                 currencyOptions={options}
                                 onCurrencyChange={(currency)=>
                                   setTo(currency)}
-                                selectCurrency={from}
+                                selectCurrency={to}
                                 amountDisable
                                 
                             />
