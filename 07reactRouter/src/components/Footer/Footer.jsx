@@ -37,7 +37,7 @@ export default function Footer() {
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
                                     <a
-                                        href="https://github.com/hiteshchoudhary"
+                                        href="https://github.com/Ebadurrehman123"
                                         className="hover:underline"
                                         target="_blank"
                                         rel="noreferrer"
@@ -143,7 +143,7 @@ export default function Footer() {
                             <svg
                                 className="w-4 h-4"
                                 aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg"
+                                xmlns=""
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
                             >
