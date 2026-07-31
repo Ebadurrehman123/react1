@@ -4,7 +4,8 @@ import UserContext from "./UserContext";
 const UserContextProvider=({children})=>{
     const [User,setUser]=React.useState()
     return(
-        <UserContext.Provider>
+        //ap jo bhi daata pas kr ra hai wo value ma pass simply ik object pass krduga
+        <UserContext.Provider value={{user,setUser}}>  
         {children}
         </UserContext.Provider>
     )
