@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import Card from './components/Card'
-import ThemeBtn from './components/Theme'
+import ThemeBtn from './components/ThemeBtn'
 import './App.css'
 import { ThemeProvider } from 'next-themes'
 function App() {
