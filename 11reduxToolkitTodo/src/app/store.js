@@ -1,3 +1,16 @@
+//store bnanay ka ik process kai
+//sub sa phelay ap ko configure store lay kr ana hai
+//kui ka wo method hai jo is sa kam kr tha hai
+//to hum lakr atay configure store redux toolkit sa
+//ab store ban gya hai lekin ya properly tyar nai hai usecase kay liyae
+//hum is method ko use krta hwa ik variabe ko export krta hai
+
+//confiigure store ik method hai jo object hi lata hai mostly
+
+//ab next step bnatay hai reduces
+//lekin redux toolkit kay andr reducer bnta hai wo thora alag hai
+//hum us ko bolta hai slices 
+
 import {configureStore} from '@reduxjs/toolkit';
 import todoReducer from '../features/Todo/todoSlice'
 

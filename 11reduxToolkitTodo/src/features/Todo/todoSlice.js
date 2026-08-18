@@ -89,7 +89,9 @@ export const todoSlice = createSlice({
     }
 
 })
-
+//or ik chaie ap ko sare reducer ka ik main source export krna
+//ya main sorce export is liya kr ra hau kiu ka us ko us kaam ma kana hai
+//state ka andr apna store ka andr 
 export const {addTodo,removeTodo}=todoSlice.actions
 
 export default todoSlice.reducer 
@@ -136,3 +138,8 @@ export default todoSlice.reducer
 //ya todoSlice ki tarah authentication slice ya kuch bhi slice bnatay ho
 //apko vo sare reducer export krnay hi paray gai
 //individual reducer ko bhi export krna parray ga same systax kiu ka wo components ma kaam ai gai
+
+
+//ab ma kisi bhi component ma state ka access lay skta hu
+//or ik chaie ap ko sare reducer ka ik main source export krna
+//ya 

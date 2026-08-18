@@ -4,7 +4,14 @@ import { removeTodo } from "../features/Todo/todoSlice";
 
 
 
-
+//useSelector irf ik method hai bs advantage ya hai us ka andr state ka access milta hai
+  //ik callback ka andr state ka andr ap ko value mil jae gi ab ap jo value chaie mil jae gi
+  //ab ham na lgyaya simple sa loop
+  //ab hmna liya todos or us pa lagaya map
+  //jab map lag gya to saree ki saree values milgai
+  //to har value lay lo acces
+  //us ka baad muja li lana hai to key value lani parray gi
+  //key ksa lu ga muja ptahai todos ka pass ik id hai
 function Todos() {
     const todos = useSelector(state => state.todos)
     const dispatch = useDispatch()
