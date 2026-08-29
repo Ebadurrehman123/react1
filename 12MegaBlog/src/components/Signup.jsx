@@ -68,6 +68,27 @@ function Signup(){
                         required:true,
                     })}
                     />
+                    <Input
+                    label="Email: "
+                    placeholder="Enter your email"
+                    type="email"
+                    {...register("email",{
+                        required:true,
+                        validate:{
+                            matchPattern:(value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.
+                            test(value) ||
+                            "Email adress must be a valid address",
+                        }
+                    })}
+                    />
+                    <input
+                    label="password"
+                    type="password"
+                    placeholder="enter your password"
+                    {...rigester("password",{
+                        required:true,
+                    })}
+                    />
                 </div>
             </form>
         </div>
