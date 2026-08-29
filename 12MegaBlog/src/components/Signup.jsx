@@ -5,6 +5,7 @@ import { login } from "../store/authSlice";
 import {button,input,logo} from './index'
 import {useDispatch} from 'react-hook-form'
 import { useForm } from "react-hook-form";
+import { Input } from "postcss";
 
 
 
@@ -41,7 +42,7 @@ function Signup(){
                 </span>
             </div>
             <h2 className="text-center text-2xl 
-            font-bold leading-tight ">sign in to your 
+            font-bold leading-tight ">sign up to your 
             accont</h2>
             <p className="mt-2 text-center text-base 
             text-black/60">
@@ -55,6 +56,20 @@ function Signup(){
                     Sign In
                 </link>
             </p>
+            {error && <p className="text-red-600 mt-8
+            text-center">{error}</p>}
+
+            <form onSubmit={handleSubmit(create)}>
+                <div className="space-y-5">
+                    <Input
+                    label="Full Name"
+                    placeholder="Enter your full name"
+                    {...register("name",{
+                        required:true,
+                    })}
+                    />
+                </div>
+            </form>
         </div>
      
     )
