@@ -7,7 +7,8 @@ import LogoutBtn from "./Header/LogoutBtn";
 export {
     Header,
     Footer,
-    Container,
+    Container_,
     Logo,
-    LogoutBtn
+    LogoutBtn,
+    RTE
 }
