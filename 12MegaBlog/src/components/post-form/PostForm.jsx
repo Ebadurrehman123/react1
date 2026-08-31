@@ -34,17 +34,53 @@ function PostForm({post}) {
             (post.$id,{
                 ...data,
                 featuredImage: file ? file.$id : undefined,
-
+            })
             if (dbpost){
                 navigate(`/post/${dbPost.$id}`)
             }
+        }else{
+            const file = await appwriteService.uploadFile
+            (data.image[0]);
+
+            if (file) {
+                const fileId = file.$id
+                data.featuredImage = fileId
+                const dbPost = await appwriteService.createpost({
+                    ...data,
+                    userId:userData.$id,
+                })
+                if (dbPost) {
+                    navigate(`/post/${dbPost.$id}`)
+                }
             }
-        )
         }
-    }
+            
+            }
+    
 
     
-    
+    const slugTransfom = useCallback ((value) => {
+        if (value && typeof value === 'string') 
+           return value
+              .trim()
+              .toLowerCase()
+              .replace(/^[a-zA-Z\d\s]+/g,'-')
+              .replace(/\s/g,'-')
+
+           return ''
+        
+    },[])
+    React.useEffect(() => {
+        const Subcription = watch((value,{name}) => {
+            if (name ==='title') {
+                setValue('slug',slugTransfom(value.title,
+                    {shouldValidate:true}))
+            }
+
+        })
+        
+
+    },[watch,slugTransfom,setValue])
     return (
         <div>PostForm</div>
     )
