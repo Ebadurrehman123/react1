@@ -1,14 +1,20 @@
 import Header from "./header/Header";
 import Footer from "./Footer/Footer";
-import Container_ from ".container/Container";
+import Container from ".Container/Container";
 import Logo from "./Logo";
 import LogoutBtn from "./Header/LogoutBtn";
+import Signup from "./Signup"
+import RTE from "./RTE";
+import Login from "./Login";
+
 
 export {
     Header,
     Footer,
-    Container_,
+    Container,
     Logo,
     LogoutBtn,
-    RTE
+    RTE,
+    Signup,
+    Login
 }
