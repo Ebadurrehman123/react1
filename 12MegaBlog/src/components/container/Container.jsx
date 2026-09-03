@@ -6,3 +6,5 @@ function Container({children}) {
             {children}</div>;
     
 }
+
+export default Container
